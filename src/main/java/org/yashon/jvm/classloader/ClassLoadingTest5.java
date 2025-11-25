@@ -17,7 +17,12 @@ public class ClassLoadingTest5 {
 }
 
 interface MyParent5 {
-    public static final int a = new Random().nextInt();
+    public static final Thread t = new Thread(){
+        {
+            System.out.println("MyParent5 thread invoked");
+        }
+
+    };
 }
 
 interface MyChild5 extends MyParent5 {
