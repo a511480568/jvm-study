@@ -26,6 +26,10 @@ public class ClassLoadingTest13 extends ClassLoader{
         this.classLoaderName = classLoaderName;
     }
 
+    public ClassLoadingTest13(ClassLoader parent) {
+        super(parent);
+    }
+
     public void setPath(String path) {
         this.path = path;
     }
